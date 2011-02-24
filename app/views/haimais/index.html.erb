@@ -1,0 +1,27 @@
+<h1>Listing haimais</h1>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Content</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @haimais.each do |haimai| %>
+  <tr>
+    <td><%= haimai.author %></td>
+    <td><%= haimai.content %></td>
+    <td><%= haimai.date %></td>
+    <td><%= link_to 'Show', haimai %></td>
+    <td><%= link_to 'Edit', edit_haimai_path(haimai) %></td>
+    <td><%= link_to 'Destroy', haimai, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Haimai', new_haimai_path %>

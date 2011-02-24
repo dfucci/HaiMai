@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Author:</b>
+  <%= @haimai.author %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @haimai.content %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @haimai.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_haimai_path(@haimai) %> |
+<%= link_to 'Back', haimais_path %>
